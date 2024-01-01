@@ -1,0 +1,60 @@
+---
+databaseChangeLog:
+  - changeSet:
+      id: createFirebaseNotificationTable
+      author: mazbah
+      changes:
+        - createTable:
+            tableName: firebase_notification_history
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(256)
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: message
+                  type: varchar(1000)
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: click_action
+                  type: text
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: topic
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: username
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: created_at
+                  type: datetime
+                  defaultValueComputed: NOW()
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: updated_at
+                  type: datetime
+                  defaultValueComputed: NOW()
+                  constraints:
+                    nullable: true
+                    unique: false

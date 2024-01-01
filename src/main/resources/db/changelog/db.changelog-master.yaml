@@ -1,0 +1,8 @@
+---
+databaseChangeLog:
+  - include:
+      file: fly/db.changelog-users.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: rsa/db.changelog-firebase_notification_history.yaml
+      relativeToChangelogFile: true
