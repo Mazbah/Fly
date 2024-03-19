@@ -10,10 +10,10 @@ public class SecurityConfig implements Serializable {
 
     @Autowired ConfigProps config;
 
-    public Validator getVerifier(String token){
-         Validator v = new Validator(token, config.getJwtSecret());
-    }
-
-    fun getVerifier(token: String): Validator = Validator(token, fsConfig.jwtSecret)
+//    public Validator getVerifier(String token){
+//         Validator v = new Validator(token, config.getJwtSecret());
+//    }
+//
+//    fun getVerifier(token: String): Validator = Validator(token, fsConfig.jwtSecret)
 
 }
